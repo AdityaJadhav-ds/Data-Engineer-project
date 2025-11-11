@@ -1,14 +1,15 @@
 import pymysql
-import pandas as pd 
+import pandas as pd
 
-con = pymysql.connect(
-    host = 'localhost' ,
-    user = 'root',
-    password= 'aditya524' ,
-    autocommit= True
+# === 1. MySQL Connection Setup ===
+connection = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='pratik',   # Change if needed
+    autocommit=True
 )
 
-cursor = con.cursor()
+cursor = connection.cursor()
 
 # === 2. Create "BigMark" Database ===
 cursor.execute("CREATE DATABASE IF NOT EXISTS BigMart")
@@ -59,6 +60,6 @@ insert_data(df_sales, 'sales_info')
 # === 6. Done ===
 print("✅ BigMart database created and all tables loaded successfully!")
 
-# 
+# Close connection
 cursor.close()
-con.close()
+connection.close()
