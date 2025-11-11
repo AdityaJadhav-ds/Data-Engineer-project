@@ -2,12 +2,19 @@ import pymysql
 import pandas as pd
 
 # === 1. MySQL Connection Setup ===
-connection = pymysql.connect(
-    host='localhost',
-    user='root',
-    password='aditya524',   # Change if needed
-    autocommit=True
-)
+import traceback
+
+try:
+    connection = pymysql.connect(
+        host='localhost',
+        user='root',
+        password='aditya524',   # Change if needed
+        autocommit=True
+    )
+    print("✅ Connected successfully!")
+except Exception as e:
+    print("❌ Connection failed:")
+    traceback.print_exc()
 
 cursor = connection.cursor()
 
@@ -63,4 +70,5 @@ print("✅ BigMart database created and all tables loaded successfully!")
 # Close connection
 cursor.close()
 connection.close()
+
 
