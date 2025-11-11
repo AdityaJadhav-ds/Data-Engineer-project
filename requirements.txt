@@ -1,35 +1,30 @@
-# ==========================================================
-# 🛒 BigMart Sales Forecasting App — Requirements v6
-# Streamlit + ML + Visualization + Explainability + Stability
-# ==========================================================
 
-# Core Framework
-streamlit==1.40.1
+streamlit
 
-# Data Handling
-pandas==2.2.3
-numpy==2.1.3
 
-# Machine Learning & Model Handling
-scikit-learn==1.5.2
-joblib==1.4.2
-pickle-mixin==1.0.2
+pandas
+numpy
 
-# Visualization
-plotly==5.24.1
-matplotlib==3.9.2
-seaborn==0.13.2
 
-# Optional Explainability & Analysis
-shap==0.45.0
+scikit-learn
+joblib
+pickle-mixin
 
-# Database / Backend (optional use)
-mysql-connector-python==9.0.0
-SQLAlchemy==2.0.35
 
-# Streamlit Add-ons (for beautiful UI)
-streamlit-option-menu==0.3.12
+plotly
+matplotlib
+seaborn
 
-# Utilities
-requests==2.32.3
-python-dateutil==2.9.0.post0
+
+shap
+
+
+mysql-connector-python
+SQLAlchemy
+
+
+streamlit-option-menu
+
+
+requests
+python-dateutil
